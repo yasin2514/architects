@@ -97,6 +97,7 @@ footer {
 .nav_item {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .nav_item a {
@@ -105,7 +106,6 @@ footer {
     font-weight: 500;
     font-size: 18px;
     line-height: 26px;
-    margin-left: 30px;
 }
 
 .nav_item a:hover {
@@ -125,8 +125,6 @@ footer {
     color: var(--primary-text-color);
     margin-bottom: 16px;
 }
-
-
 
 .banner_img>img {
     max-width: 100%;
@@ -192,6 +190,10 @@ main {
     color: var(--orange);
 }
 
+.list_info_text {
+    margin-bottom: 0px;
+}
+
 /* enjoy & love section */
 .enjoy_section_title {
     border-left: 5px solid #FF900E;
@@ -255,6 +257,7 @@ main {
 }
 
 /* some facts section enjoy */
+/* common styles */
 .fact_card-one:hover,
 .fact_card-two:hover,
 .fact_card-three:hover,
@@ -291,10 +294,8 @@ main {
     transition: transform 1s;
 }
 
-
 .fact_card {
     text-align: center;
-    overflow: hidden;
     animation-play-state: running;
     transform-origin: top;
     animation: rotation 2s ease-in-out 1s infinite alternate;
@@ -362,7 +363,7 @@ main {
 .sponsors img {
     filter: grayscale(1);
 }
-
+/* main end */
 
 /* footer section */
 footer {
@@ -379,20 +380,12 @@ footer {
     color: var(--tertiary-text-color);
 }
 
-/* hide */
-.hide {
-    display: none;
-}
-
 /* for tablet device */
 @media only screen and (max-width:992px) {
     .section {
         flex-direction: column;
         row-gap: 30px;
-    }
-
-    .enjoy_love_section {
-        flex-direction: column-reverse;
+        margin-bottom: 80px;
     }
 
     .list_feature_img,
@@ -408,8 +401,12 @@ footer {
         margin: auto;
     }
 
+    .some_facts {
+        padding: 80px 50px;
+    }
+
     .facts_cards {
-        gap: 30px;
+        gap: 20px;
     }
 
     .sponsors {
@@ -417,5 +414,70 @@ footer {
         justify-content: center;
         max-width: 90%;
         gap: 40px;
+    }
+
+    .joinus_section,
+    footer {
+        margin-bottom: 80px;
+    }
+}
+
+/* responsive for mobile device */
+@media only screen and (max-width:668px) {
+
+    .section,
+    .joinus_section,
+    footer {
+        margin-bottom: 60px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav_item {
+        gap: 15px;
+    }
+
+    .banner_info {
+        padding: 60px 0px 50px 0px;
+    }
+
+    .banner_info_title {
+        font-size: 50px;
+    }
+
+    .list_feature_img {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .experience {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .experience_title {
+        font-size: 35px;
+    }
+
+    .some_facts {
+        padding: 60px 50px;
+    }
+
+    .facts_cards {
+        gap: 0px;
+    }
+
+    .join_login_form input {
+        width: 100%;
+    }
+
+    .sponsors_section {
+        padding: 0px 10px;
+    }
+
+    .sponsors {
+        flex-direction: column;
     }
 }
