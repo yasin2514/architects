@@ -23,6 +23,7 @@
 
 body {
     font-family: var(--primary-font);
+    background-color: #f8f8f8;
 }
 
 /* all common styles */
@@ -123,15 +124,17 @@ main {
 
 /* navbar and banner end */
 /* main start */
-main{
+main {
     padding: 50px 0px 100px 0px;
 }
+
 /* main common styles */
 .section {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin: 0 auto;
+    margin-bottom: 100px;
     align-items: center;
 }
 
@@ -140,32 +143,99 @@ main{
     font-size: 45px;
     line-height: 53px;
     color: var(--primary-text-color);
+    margin-bottom: 24px;
+}
+
+.list_feature_img,
+.enjoy_section_img {
+    max-width: 50%;
+    width: 100%;
+}
+
+.list_feature_img img,
+.enjoy_section_img img {
+    width: 100%;
+}
+
+.list_feature_info,
+.enjoy_section_info {
+    max-width: 40%;
+    width: 100%;
 }
 
 /* list feature section*/
+
 .list_feature {
     justify-content: space-evenly;
 }
 
 .list_feature_img {
-    max-width: 50%;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-.list_feature_img img{
-    width: 100%;
-}
 
-.list_feature_info {
-    max-width: 40%;
-    width: 100%;
-}
-.list_span-one{
+.list_span-one {
     color: var(--tertiary-text-color);
     font-weight: 500;
 }
-.list_span-two{
+
+.list_span-two {
     color: var(--orange);
+}
+
+/* enjoy & love section */
+.enjoy_section_title {
+    border-left: 5px solid orange;
+    padding: 0px 10px;
+}
+.enjoy_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.card_title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+.card_text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--secondary-text-color);
+}
+/* experience */
+.experience{
+    text-align: center;
+    background-color: var(--orange);
+    max-width: 340px;
+    width: 100%;
+    padding:30px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -170px;
+    margin-left: 550px;
+    transition: transform 2s;
+}
+.experience:hover{
+    transform: scale(1.2);
+}
+.experience_title{
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+}
+.experience_text{
+    font-weight: 500;
+    font-size: 25px;
+    color: #FFFFFF;
+    
 }
