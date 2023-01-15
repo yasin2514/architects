@@ -68,7 +68,7 @@ body {
 /* header start */
 header {
     background-color: var(--primary-bg-color);
-    padding: 10px 0px;
+    padding: 10px 20px;
 }
 
 /* navbar and banner start */
@@ -78,7 +78,6 @@ header {
 main,
 footer {
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -130,7 +129,7 @@ footer {
 
 
 .banner_img>img {
-    width: 100%;
+    max-width: 100%;
 }
 
 /* navbar and banner end */
@@ -142,7 +141,7 @@ main {
 /* main common styles */
 .section {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 100px;
@@ -160,18 +159,16 @@ main {
 .list_feature_img,
 .enjoy_section_img {
     max-width: 50%;
-    width: 100%;
 }
 
 .list_feature_img img,
 .enjoy_section_img img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .list_feature_info,
 .enjoy_section_info {
     max-width: 40%;
-    width: 100%;
 }
 
 /* list feature section*/
@@ -233,7 +230,6 @@ main {
     text-align: center;
     background-color: var(--orange);
     max-width: 340px;
-    width: 100%;
     padding: 30px;
     border-radius: 10px;
     position: absolute;
@@ -259,6 +255,13 @@ main {
 }
 
 /* some facts section enjoy */
+.fact_card-one:hover,
+.fact_card-two:hover,
+.fact_card-three:hover,
+.fact_card-four:hover {
+    transform: scale(1.1);
+}
+
 /* animation using in facts card */
 @keyframes rotation {
     0% {
@@ -285,7 +288,9 @@ main {
     padding: 30px 40px;
     border-radius: 7px;
     margin-top: 50px;
+    transition: transform 1s;
 }
+
 
 .fact_card {
     text-align: center;
@@ -308,7 +313,7 @@ main {
     color: var(--tertiary-text-color);
 }
 
-/* join with us section */
+/*custom join with us section */
 .joinus_section {
     background-color: rgb(211, 204, 201);
     border-radius: 10px;
@@ -372,4 +377,45 @@ footer {
     font-size: 20px;
     line-height: 23px;
     color: var(--tertiary-text-color);
+}
+
+/* hide */
+.hide {
+    display: none;
+}
+
+/* for tablet device */
+@media only screen and (max-width:992px) {
+    .section {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .enjoy_love_section {
+        flex-direction: column-reverse;
+    }
+
+    .list_feature_img,
+    .enjoy_section_img,
+    .list_feature_info,
+    .enjoy_section_info {
+        max-width: 90%;
+    }
+
+    .experience {
+        position: relative;
+        margin-top: 0;
+        margin: auto;
+    }
+
+    .facts_cards {
+        gap: 30px;
+    }
+
+    .sponsors {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 90%;
+        gap: 40px;
+    }
 }
