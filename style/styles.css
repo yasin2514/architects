@@ -186,56 +186,125 @@ main {
 
 /* enjoy & love section */
 .enjoy_section_title {
-    border-left: 5px solid orange;
+    border-left: 5px solid #FF900E;
     padding: 0px 10px;
 }
-.enjoy_cards{
+
+.enjoy_cards {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.card{
+
+.enjoy_card {
     background-color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
 }
-.card_title{
+
+.enjoy_card_title {
     font-weight: 600;
     font-size: 20px;
     line-height: 23px;
     color: var(--primary-text-color);
     margin-bottom: 10px;
 }
-.card_text{
+
+.enjoy_card_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     color: var(--secondary-text-color);
 }
+
 /* experience */
-.experience{
+.experience {
     text-align: center;
     background-color: var(--orange);
     max-width: 340px;
     width: 100%;
-    padding:30px;
+    padding: 30px;
     border-radius: 10px;
     position: absolute;
     margin-top: -170px;
     margin-left: 550px;
     transition: transform 2s;
 }
-.experience:hover{
-    transform: scale(1.2);
+
+.experience:hover {
+    transform: scale(1.15);
 }
-.experience_title{
+
+.experience_title {
     font-weight: 700;
     font-size: 65px;
     color: #FFFFFF;
 }
-.experience_text{
+
+.experience_text {
     font-weight: 500;
     font-size: 25px;
     color: #FFFFFF;
-    
 }
+
+/* some facts section enjoy */
+/* animation using in facts card */
+@keyframes rotation {
+    0% {
+        transform: rotate(18deg);
+    }
+
+    100% {
+        transform: rotate(-18deg);
+    }
+}
+.some_facts{
+    padding:100px  50px;
+}
+
+.facts_cards {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.facts_card {
+    border: 1px solid #FF900E;
+    padding: 30px 40px;
+    border-radius: 7px;
+    margin-top: 50px;
+}
+
+.fact_card {
+    text-align: center;
+    overflow: hidden;
+    animation-play-state: running;
+    transform-origin: top;
+    animation: rotation 2s ease-in-out 1s infinite alternate;
+
+}
+
+.facts_card_title {
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--secondary-text-color);
+}
+
+.facts_card_text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-text-color);
+}
+/* our sponsor section */
+.sponsors_section{
+    text-align: center;
+}
+.sponsors{
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.sponsors img{
+    filter: grayscale(1);
+}
+
